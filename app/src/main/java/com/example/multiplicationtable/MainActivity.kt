@@ -1,5 +1,6 @@
 package com.example.multiplicationtable
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import androidx.activity.enableEdgeToEdge
@@ -15,6 +16,11 @@ class MainActivity : AppCompatActivity() {
 
         val btnMultiply = findViewById<Button>(R.id.btnMultiply)
 
+        btnMultiply.setOnClickListener {
+
+            val intent = Intent(this, MainActivity2::class.java)
+            startActivity(intent)
+        }
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())

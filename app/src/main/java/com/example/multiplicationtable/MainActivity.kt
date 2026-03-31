@@ -13,11 +13,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
-
+        //added variable to hold multiplication button
         val btnMultiply = findViewById<Button>(R.id.btnMultiply)
-
+        //a listener listens for a button that's been clicked
         btnMultiply.setOnClickListener {
-
+            
             val intent = Intent(this, MainActivity2::class.java)
             startActivity(intent)
         }

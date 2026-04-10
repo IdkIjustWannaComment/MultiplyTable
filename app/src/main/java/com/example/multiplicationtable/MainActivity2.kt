@@ -17,9 +17,10 @@ class MainActivity2 : AppCompatActivity() {
         //recieving data from the main activity
         val bundle: Bundle? = intent.extras
 
-        //val tableString: Bundle?.getString("tableNumber")
-       // val tableNumber = tableString?.toInt()
+        val tableString: String? = bundle?.getString("tableNumber")
+        val tableNumber = tableString?.toInt()
         val multiplyTbl = findViewById<TextView>(R.id.txtMultiplyTextView)
+        multiplyTbl.text = "$tableNumber x table"
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
